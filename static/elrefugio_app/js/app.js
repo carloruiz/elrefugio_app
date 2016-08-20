@@ -8,10 +8,6 @@
 
 function main() {
 
-    $('#msg').hide();
-    $('header').fadeTo(200, 1);
-    $('main').fadeTo(200, 1);
-    $('footer').fadeTo(200, 1);
 
     /******** Nav Bar *******************************/
     var $nav = $('header .nav-container'),
@@ -45,7 +41,6 @@ function main() {
 
 
     /*********** Banner ******************************/
-
     function resizeBanner() {
         slideShowHeight = $("#slideshow div img").height();
         console.log(slideShowHeight);
@@ -54,20 +49,41 @@ function main() {
         $("#banner").css("margin", `${bannerMargin}px 0`);
         $("#banner").css("height", `${bannerHeight}px`);
 
+        var topTextHeight = $("#banner :first-child").height();
+        var bottomTextHeight = $("#banner .emphasis").height();
+        var textMargin = bannerHeight - topTextHeight - bottomTextHeight;
+        $("#banner :first-child").css("margin-bottom", `${textMargin}px`);
+
+        console.log(`topTextHeight ${topTextHeight}, bottomTextHeight ${bottomTextHeight}, bannerHeight${bannerHeight}, textMargin${textMargin}`);
         var heroWidth = $("body").innerWidth().toString()
         $("#slideshow div img").css("width", heroWidth)
     };
-    resizeBanner();
+
+    setTimeout(function() {
+        resizeBanner();
+    }, 50);
+
+
     setTimeout(function() {
         resizeBanner();
         $("#banner").fadeTo(1500, 1);
-    }, 3000);
+    }, 2500);
     window.addEventListener('resize', resizeBanner);
+
+    if (resizeBanner() === 1){
+      resizeBanner();
+    }
 }
+
 /********** Display until load complete ************/
 
 $(document).ready(function() {
-    main()
+    main();
+
+    $('#msg').hide();
+    $('header').fadeTo(200, 1);
+    $('main').fadeTo(200, 1);
+    $('footer').fadeTo(200, 1);
 });
 
 

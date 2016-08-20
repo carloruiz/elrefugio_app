@@ -20,7 +20,9 @@
             }
             footer .footer-piece :last-child {
               margin: 0;
-
+            }
+            #banner p {
+              font-size: 3em;
             }
           }
           @media screen and (max-width: 600px) {
@@ -46,6 +48,8 @@
 
               #banner p {
                 font-size: 20px;
+                margin-left: 8px;
+                margin-right: 8px;
               }
           }
         </style>
@@ -82,12 +86,10 @@
       </header>
 
       <main>
-
 	{% block content %}
 	{% endblock %}
 
       </main>
-
 
       <footer>
           <hr>

@@ -109,8 +109,8 @@ main hr {
 
 #banner {
   background-color: rgba(256, 256, 256, 0.4);
-  visibility: visible;
   opacity: 0;
+  visibility: visible;
   position: relative;
 }
 
