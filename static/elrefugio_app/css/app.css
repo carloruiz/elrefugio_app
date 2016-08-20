@@ -1,3 +1,8 @@
+header, main, footer {
+  opacity: 0;
+  visibility: visible;
+}
+
 .le-container {
   max-width: 1200px;
   margin: auto;
@@ -104,8 +109,8 @@ main hr {
 
 #banner {
   background-color: rgba(256, 256, 256, 0.4);
-  opacity: 0;
   visibility: visible;
+  opacity: 0;
   position: relative;
 }
 
@@ -121,6 +126,7 @@ main hr {
   text-align: right;
   margin-right: 20px
 }
+
 /**********footer code **************************************/
 
 footer hr {

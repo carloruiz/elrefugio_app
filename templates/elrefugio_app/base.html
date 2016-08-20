@@ -52,11 +52,15 @@
     </head>
 
     <body>
+      <div id="msg">
+        <h1>Loaaaaddding</h1>
+      </div>
+
       <header>
           <div class="top-header">
-		  <img id="logo" src="{% static "elrefugio_app/images/freepik.jpg" %}" height="90px" width="90px">
+		        <img id="logo" src="{% static "elrefugio_app/images/freepik.jpg" %}" height="90px" width="90px">
             <h1>Asilo el Refugio</h1>
-	    <a href="#"><img id="fb-icon" src="{% static "elrefugio_app/images/f_icon.svg" %}" height="30px" width="30px"></a>
+	          <a href="#"><img id="fb-icon" src="{% static "elrefugio_app/images/f_icon.svg" %}" height="30px" width="30px"></a>
           </div>
           <div class="nav-container">
             <nav class="navbar navbar-default">
@@ -76,6 +80,7 @@
             </nav>
           </div>
       </header>
+
       <main>
 
 	{% block content %}
