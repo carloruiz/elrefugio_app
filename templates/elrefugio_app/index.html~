@@ -1,0 +1,28 @@
+{% extends 'elrefugio_app/base.html' %}
+  {% block content %}
+       <hr>
+       <div id="slideshow">
+          <div>
+	     {% load static  %}
+             <img src="{% static "elrefugio_app/images/hero1.jpg" %}">
+          </div>
+          <div>
+             <img src="{% static "elrefugio_app/images/hero2.jpg" %}">
+          </div>
+          <div>
+             <img src="{% static "elrefugio_app/images/hero4.jpg" %}>
+          </div>
+      </div>
+      <div id="banner">
+         <p>Yo soy Asilo El Refugio .. </p>
+         <br>
+         <br>
+         <p style="font-weight: bold; text-align: right; margin-right: 20px"><span> y tu?</span></p>
+         </div>
+       <hr>
+
+
+       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <br><br><br><br><br><br>
+  {% endblock %}
+

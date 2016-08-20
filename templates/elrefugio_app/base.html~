@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--voluntario juntosporbaja -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Asilo el Refugio</title>
+	{% load  static %}
+	<link rel="stylesheet" type="text/css" href="{% static "elrefugio_app/bootstrap/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "elrefugio_app/css/app.css" %}">
+        <link href='https://fonts.googleapis.com/css?family=Dynalight' rel='stylesheet' type='text/css'>
+
+
+
+        <style>
+          @media screen and (max-width: 900px){
+            footer :last-child {
+              margin-left: 50px;
+            }
+            footer .footer-piece :last-child {
+              margin: 0;
+
+            }
+          }
+          @media screen and (max-width: 600px) {
+              #fb-icon {
+                display: none;
+              }
+              h1 {
+                text-align: center;
+              }
+              .footer-piece {
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin-bottom: 30px;
+              }
+              footer :last-child {
+                margin-left: 0;
+              }
+
+              footer :first-child {
+                width: 100%;
+              }
+
+              #banner p {
+                font-size: 20px;
+              }
+          }
+        </style>
+    </head>
+
+    <body>
+      <header>
+          <div class="top-header">
+		  <img id="logo" src="{% static "elrefugio_app/images/freepik.jpg" %}" height="90px" width="90px">
+            <h1>Asilo el Refugio</h1>
+	    <a href="#"><img id="fb-icon" src="{% static "elrefugio_app/images/f_icon.svg" %}" height="30px" width="30px"></a>
+          </div>
+          <div class="nav-container">
+            <nav class="navbar navbar-default">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li><a class="nav-link" href="#">Quienes Somos</a></li>
+                    <li><a class="nav-link" href="#">Adopta un Abuelo</a></li>
+                    <li><a class="nav-link" href="#">Como Ayudar</a></li>
+                    <li><a class="nav-link" href="#">Benefactores</a></li>
+                  </ul>
+              </div>
+            </nav>
+          </div>
+      </header>
+      <main>
+
+	{% block content %}
+	{% endblock %}
+
+      </main>
+
+
+      <footer>
+          <hr>
+          <div class="footer-piece">
+              <div style="width: 90px; margin: auto">
+		      <img id="logo-footer" src="{% static "elrefugio_app/images/freepik.jpg" %} height="90px" width="90px">
+              </div>
+          </div>
+          <div class="footer-piece">
+              <h2>Visitanos</h2>
+                  <p>Calle Sonora 69, Chapultepec</p>
+                  <p>Tijuana, B.C. Mexico</p>
+          </div>
+          <div id="divider">
+          </div>
+          <div class="footer-piece">
+              <h2>Contactanos</h2>
+              <p>asilo@gmail.com</p>
+              <p>+1 568-1325</p>
+          </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js"  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+      <script src="{% static "elrefugio_app/bootstrap/js/bootstrap.min.js" %}" type="text/javascript" charset="utf-8" async defer></script>
+      <script src="{% static "elrefugio_app/js/app.js" %}"></script>
+    </body>
+</html>
+
+
