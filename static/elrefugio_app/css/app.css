@@ -116,7 +116,6 @@ main hr {
 
 #banner p {
   font-family: palatino, serif;
-  font-style: italic;
   font-size: 5em;
   margin-left: 15px;
 }
@@ -127,6 +126,12 @@ main hr {
   margin-right: 20px
 }
 
+#metas {
+  background-color: beige;
+  margin-top: -12px;
+  z-index: -1;
+  position: relative;
+}
 .mission {
   margin: 0 5%;
 }
@@ -136,13 +141,20 @@ main hr {
   text-align: center;
 }
 
-.icons p {
-  max-width: 300px;
-  margin: auto;
+
+.icons h2 {
+  font-family: 'Dynalight', serif;
+  font-size: 4.5em;
 }
 
 .icon-holder {
   margin: 0;
+}
+
+.content h1 {
+  font-family: palatino, serif;
+  font-size: 6em;
+  color: grey;
 }
 
 .content p {
@@ -151,7 +163,48 @@ main hr {
   font-style: italic;
 }
 
+.icons p {
+  max-width: 300px;
+  margin: auto;
+  font-size: 20px;
+}
 
+#unete {
+  background-color: gold;
+  width: 100%;
+  z-index: -1;
+  font-size: 2em;
+  font-family: palatino, serif;
+}
+
+#eventos {
+  text-align: left;
+  max-width: 90%;
+  margin: 30px auto;
+
+}
+
+#eventos h1 {
+  font-family: palatino, sans-serif;
+  margin-left: 0;
+}
+
+#eventos p {
+  font-size: 16px;
+}
+
+#eventos hr {
+  box-shadow: inset 0 10px 0 0 rgba(0, 0, 0, 0.1);
+  height: 1px;
+  color: black;
+  margin: 25px 0 25px 0;
+}
+
+.event-photo {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 25% 5% 0 0;
+}
 
 /**********footer code **************************************/
 

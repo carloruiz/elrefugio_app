@@ -8,7 +8,6 @@
 
 function main() {
 
-
     /******** Nav Bar *******************************/
     var $nav = $('header .nav-container'),
         $scrolled = $(".main-nav-scrolled"),
@@ -43,7 +42,6 @@ function main() {
     /*********** Banner ******************************/
     function resizeBanner() {
         slideShowHeight = $("#slideshow div img").height();
-        console.log(slideShowHeight);
         bannerMargin = slideShowHeight * 0.25;
         bannerHeight = slideShowHeight * 0.50;
         $("#banner").css("margin", `${bannerMargin}px 0`);
@@ -54,7 +52,6 @@ function main() {
         var textMargin = bannerHeight - topTextHeight - bottomTextHeight;
         $("#banner :first-child").css("margin-bottom", `${textMargin}px`);
 
-        console.log(`topTextHeight ${topTextHeight}, bottomTextHeight ${bottomTextHeight}, bannerHeight${bannerHeight}, textMargin${textMargin}`);
         var heroWidth = $("body").innerWidth().toString()
         $("#slideshow div img").css("width", heroWidth)
     };
@@ -68,14 +65,25 @@ function main() {
         resizeBanner();
         $("#banner").fadeTo(1500, 1);
     }, 2500);
+
     window.addEventListener('resize', resizeBanner);
 
     if (resizeBanner() === 1){
       resizeBanner();
     }
+
+
+    /********** Event photo hights *******************/
+    photoHeight = $(".event-photo").parent().prev().height();
+    $(".event-photo").css("max-height", `${photoHeight}px`)
+
+
+    /********** Removing last <hr> *****************/
+    $("#eventos").children().last().children().last().remove();
+
 }
 
-/********** Display until load complete ************/
+
 
 $(document).ready(function() {
     main();
