@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <!--voluntario juntosporbaja -->
+      <!--voluntario juntos por baja -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Asilo el Refugio</title>
-	{% load  static %}
-	<link rel="stylesheet" type="text/css" href="{% static "elrefugio_app/bootstrap/css/bootstrap.min.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "elrefugio_app/css/app.css" %}">
+	      <title>Asilo el Refugio</title>
+	      {% load  static %}
+	      <link rel="stylesheet" type="text/css" href="{% static 'elrefugio_app/bootstrap/css/bootstrap.min.css' %}">
+	      <link rel="stylesheet" type="text/css" href="{% static 'elrefugio_app/css/app.css' %}">
         <link href='https://fonts.googleapis.com/css?family=Dynalight' rel='stylesheet' type='text/css'>
-
-
-
         <style>
           @media screen and (max-width: 900px){
             footer > :last-child {
@@ -50,13 +47,17 @@
                 margin-right: 8px ;
               }
 
-              #metas h1 {
-                font-size: 3em
+              .content h1 {
+                font-size: 3em;
+                margin-top: 20px;
               }
 
               .icon-holder > :nth-child(2),
               .icon-holder > :nth-child(3) {
                 margin-top: 20px;
+              }
+              .event-photo{
+                margin: 5% auto;
               }
           }
         </style>
@@ -64,13 +65,15 @@
 
     <body>
       <div id="msg">
-        <h1>Loaaaaddding</h1>
+        <h1></h1>
       </div>
 
       <header>
           <div class="top-header">
-		        <img id="logo" src="{% static "elrefugio_app/images/freepik.jpg" %}" height="90px" width="90px">
+		        <a href="/">
+            <img id="logo" src="{% static 'elrefugio_app/images/freepik.jpg' %}" height="90px" width="90px">
             <h1>Asilo el Refugio</h1>
+            </a>
 	          <a href="#"><img id="fb-icon" src="{% static "elrefugio_app/images/f_icon.svg" %}" height="30px" width="30px"></a>
           </div>
           <div class="nav-container">
@@ -82,10 +85,10 @@
                 </button>
               <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav">
-                    <li><a class="nav-link" href="#">Quienes Somos</a></li>
-                    <li><a class="nav-link" href="#">Adopta un Abuelo</a></li>
-                    <li><a class="nav-link" href="#">Como Ayudar</a></li>
-                    <li><a class="nav-link" href="#">Benefactores</a></li>
+                    <li><a class="nav-link" href="/quienes-somos">Quienes Somos</a></li>
+                    <li><a class="nav-link" href="/adopta-un-abuelo">Adopta un Abuelo</a></li>
+                    <li><a class="nav-link" href="/como-ayudar">Como Ayudar</a></li>
+                    <li><a class="nav-link" href="/benefactores">Benefactores</a></li>
                   </ul>
               </div>
             </nav>

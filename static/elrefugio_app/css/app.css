@@ -1,3 +1,7 @@
+
+a {
+  color: black;
+}
 header, main, footer {
   opacity: 0;
   visibility: visible;
@@ -115,6 +119,7 @@ main hr {
 }
 
 #banner p {
+  color: grey;
   font-family: palatino, serif;
   font-size: 5em;
   margin-left: 15px;

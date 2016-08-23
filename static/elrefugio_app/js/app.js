@@ -73,7 +73,7 @@ function main() {
     }
 
 
-    /********** Event photo hights *******************/
+    /********** Event photo max heights *******************/
     photoHeight = $(".event-photo").parent().prev().height();
     $(".event-photo").css("max-height", `${photoHeight}px`)
 
