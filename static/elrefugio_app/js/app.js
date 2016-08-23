@@ -52,9 +52,14 @@ function main() {
         var textMargin = bannerHeight - topTextHeight - bottomTextHeight;
         $("#banner :first-child").css("margin-bottom", `${textMargin}px`);
 
-        var heroWidth = $("body").innerWidth().toString()
-        $("#slideshow div img").css("width", heroWidth)
-    };
+        var heroWidth = $("body").innerWidth().toString();
+        $("#slideshow div img").css("width", heroWidth);
+
+        if ($(window).height() > $("body").height()) {
+          var footerMargin = $(window).height() - $("body").height() + $("footer").height();
+          $("footer").css("margin-top", `${footerMargin}px`);
+        }
+    }
 
     setTimeout(function() {
         resizeBanner();

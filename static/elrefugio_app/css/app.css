@@ -211,6 +211,20 @@ main hr {
   margin: 25% 5% 0 0;
 }
 
+/** quienes somos ****/
+.content-wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  font-family: palatino, sans-serif;
+}
+
+.content-wrapper p {
+  font-size: 17px;
+  font-family: sans-serif;
+  line-height: 28px;
+}
+
 /**********footer code **************************************/
 
 footer hr {
